@@ -1,27 +1,18 @@
-
-import {Card} from "./components/Card/Card";
-import "./styles/global.css"
+import { Card } from "./components/Card/Card";
+import "./styles/global.css";
 
 function App() {
   return (
-    <section className="header">
-      <Card
-      title = "Entradas"
-      icon = "/img/verde.svg"
-      value = "R$ 17.400,00" />
+    <main>
+      <section className="header">logo Button</section>
+      <section className="dashboard">
+        <Card type="income" value={17400} />
 
-      <Card 
-      title = "Saídas"
-      icon = "/img/vermelho.svg"
-      value = "R$ 1.259,00" />
-      
-      <Card 
-      title = "Total"
-      icon = "/img/sifrao.svg"
-      value = "R$ 16.141,00" />
+        <Card type="outcome" value={1259} />
 
-    </section>
-    
+        <Card type="total" value={16141} />
+      </section>
+    </main>
   );
 }
 
